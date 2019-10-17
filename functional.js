@@ -6,7 +6,6 @@ var output = fs.readFileSync('data.txt', 'utf8')
 .split('\n')
 .map(line => line.split('\t'))
 .reduce((contact, line) => {
-    // console.log('hello', line);
     contact[line[0]] = contact[line[0]] || []
     contact[line[0]].push({
         firstName: line[1],
